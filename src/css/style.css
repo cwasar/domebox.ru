@@ -8,11 +8,22 @@
 /*variables*/
 :root {
     --primary-color: #282828;
+    --accent-color: #F4903E;
+    --white: #FFFFFF;
+    --text-gray: #949191;
+
+    --radius_5: 5px;
+
+    --fz-16: 16px;
 }
 
 body{
     font-family: "Jost", sans-serif;
     background-color: var(--primary-color);
+    font-size: 16px;
+}
+body a{
+    color: var(--white);
 }
 
 .container{
@@ -22,13 +33,42 @@ body{
 }
 
 /*header*/
-.header{}
+.header{
+    padding: 2rem;
+    position: fixed;
+}
 .header_content{}
-.header_top{}
-.header_phone{}
+.header_top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header_phone{
+    display: flex;
+    flex-direction: column;
+}
 .number{}
 .callback{}
 .header_logo{}
 .header_callback{}
-.header_menu{}
+.header_menu{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 1rem;
+}
 .header_menu a{}
+.btn-secondary{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 208px;
+    height: 39px;
+    border-radius: var(--radius_5);
+    border: 1px solid var(--white);
+    color: var(--white);
+    font-size: 1rem;
+}
+
+

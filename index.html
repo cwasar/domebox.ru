@@ -8,6 +8,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
     <link rel="stylesheet" href="src/css/style.css">
     <title>Document</title>
 </head>
@@ -18,7 +21,7 @@
                 <div class="header_top">
                     <div class="header_phone">
                         <a href="" class="number">+7 (495) 07 07 497</a>
-                        <a href="" class="callback">Позвоните мне!</a>
+                        <a href="" class="callback menu-extra">Позвоните мне!</a>
                     </div>
                     <div class="header_logo">
                         <img src="src/img/logo.png" alt="">
@@ -27,16 +30,97 @@
                         <div class="btn-secondary">Оставить заявку</div>
                     </div>
                 </div>
-                <nav class="header_menu">
-                    <a href="#">Каталог</a>
-                    <a href="#">Портфолио</a>
-                    <a href="#">Клиентам</a>
-                    <a href="#">О нас</a>
-                    <a href="#">Контакты</a>
+                <nav>
+                    <ul class="header_menu" >
+                        <li><a href="#" class="menu-link">Каталог</a></li>
+                        <li><a href="#" class="menu-link">Портфолио</a></li>
+                        <li class="has-submenu">
+                            <a href="#" class="menu-link">Клиентам</a>
+                            <div class="submenu">
+                                <ul class="submenu-inner">
+                                    <li><a class="menu-link" href="">Доставка и монтаж</a></li>
+                                    <li><a class="menu-link" href="">Оплата</a></li>
+                                    <li><a class="menu-link" href="">Гарантия</a></li>
+                                    <li><a class="menu-link" href="">Сертификаты</a></li>
+                                    <li><a class="menu-link" href="">О компании</a></li>
+                                    <li><a class="menu-link" href="">Полезное</a></li>
+                                </ul>
+                            </div>
+
+                        </li>
+                        <li><a href="#" class="menu-link">О нас</a></li>
+                        <li><a href="#" class="menu-link">Контакты</a></li>
+                    </ul>
                 </nav>
             </div>
         </div>
     </header>
+
+    <section class="main-slider">
+            <div class="main-slider_content">
+                <div class="swiper-front swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide swiper-front_slide video-background">
+                            <video autoplay muted loop>
+                                <source src="src/video/first-slide.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="swiper-slide swiper-front_slide" style="background-image: url('src/img/slide1.jpg')">
+                            <div class="container">
+                                <div class="swiper-front_slide_content">
+                                    <h1 class="h1">Роллетные<br> металлические<br> <span class="h1 accent-color">шкафы</span></h1>
+                                    <h3 class="h3 mt-2">Изготавливаем по вашим размерам<br> для любых задач и пространств</h3>
+                                    <ul class="arrow-list">
+                                        <li class="h3 arrow-list_item">Собственное производство</li>
+                                        <li class="h3 arrow-list_item">Сертификаты соотвествия</li>
+                                        <li class="h3 arrow-list_item">Профессиональная команда</li>
+                                        <li class="h3 arrow-list_item">Сроки от 2 дней</li>
+                                        <li class="h3 arrow-list_item">Работаем по договору</li>
+                                    </ul>
+                                    <div class="btn_block">
+                                        <a class="btn-primary">Оставить заявку</a>
+                                        <a class="h3_link ml-2">Каталог решений</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide swiper-front_slide" style="background-image: url('src/img/slide1.jpg')">
+                            <div class="container">
+                                <div class="swiper-front_slide_content">
+                                    <h1 class="h1">Оснащение<br> <span class="h1 accent-color">кладовых <br> помещений</span></h1>
+                                    <h3 class="h3 mt-2">Продуманное решение для того, что<br> не поместилось в квартире:</h3>
+                                    <ul class="arrow-list">
+                                        <li class="h3 arrow-list_item">Спортивное снаряжение</li>
+                                        <li class="h3 arrow-list_item">Инструменты</li>
+                                        <li class="h3 arrow-list_item">Чемоданы</li>
+                                        <li class="h3 arrow-list_item">Детские кресла</li>
+                                        <li class="h3 arrow-list_item">Автозапчасти</li>
+                                    </ul>
+                                    <div class="btn_block">
+                                        <a class="btn-primary">Оставить заявку</a>
+                                        <a class="h3_link ml-2">Каталог решений</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+    </section>
+
+    <section class="experience">
+        <div class="container">
+            <div class="experience_content">
+
+            </div>
+        </div>
+    </section>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="src/js/script.js"></script>
 
 </body>
 </html>

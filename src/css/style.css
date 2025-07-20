@@ -11,7 +11,7 @@
     --accent-color: #F4903E;
     --white: #FFFFFF;
     --text-gray: #949191;
-
+    --light-gray: #FAF2F2;
     --radius_5: 5px;
 
     --fz-16: 16px;
@@ -36,6 +36,14 @@ body a{
 
 /* CONSTANTS */
 
+.light-gray{
+    color: var(--light-gray) !important;
+}
+.main-text{
+    color: var(--white);
+    font-size: 16px;
+}
+
 .h1{
     font-size: 60px;
     text-transform: uppercase;
@@ -45,6 +53,10 @@ body a{
 }
 .h2{
     font-size: 40px;
+    text-transform: uppercase;
+    font-weight: 400;
+    line-height: 110%;
+    color: var(--white);
 }
 .h3{
     font-size: 24px;
@@ -63,6 +75,25 @@ body a{
 .h3_link:hover{
     color: var(--accent-color);
 }
+.h3-bold{
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 100%;
+    color: var(--white);
+}
+.text-link{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 110%;
+    text-decoration:  underline;
+    color: var(--white);
+    cursor: pointer;
+    transition: color 0.2s ease-in;
+}
+.text-link:hover{
+    color: var(--accent-color);
+}
+
 .accent-color{
     color: var(--accent-color);
 }
@@ -150,6 +181,16 @@ body a{
 }
 .ml-2{
     margin-left: 2rem;
+}
+.flex-1{
+    flex: 1;
+}
+.special-text{
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 110%;
+    letter-spacing: 2%;
+    color: var(--accent-color);
 }
 /* CONSTANTS END */
 
@@ -326,3 +367,232 @@ nav{
     background: var(--accent-color) !important; /* Синий цвет для активной */
 
 }
+
+
+/* ОТЗЫВЫ */
+
+.experience{
+    height: 80vh;
+    background-image: linear-gradient(180deg,rgba(40, 40, 40, 1) 0%, rgba(255, 255, 255, 0) 18%, rgba(255, 255, 255, 0) 77%, rgba(40, 40, 40, 1) 100%);
+}
+.experience_content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    gap: 2rem;
+}
+
+.experience_item{
+    flex: 1;
+    height: 600px;
+    display: grid;
+    grid-template-rows:2fr 3fr;
+    grid-gap: 2rem;
+
+
+}
+.experience_item_inner{
+    border-radius: var(--radius_5);
+    height: auto;
+    background-size: cover;
+    background-position: center;
+    padding: 1rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+
+}
+.experience_item_inner:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Черный слой с прозрачностью 50% */
+    z-index: 1;
+}
+.experience_item_inner > * {
+    position: relative;
+    z-index: 2;
+}
+.flip-card-inner{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    height: 100%;
+}
+
+
+.flip-card {
+    background-color: transparent;
+
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+
+
+}
+
+/* Style the back side */
+.flip-card-back {
+    background-color: var(--primary-color);
+    color: white;
+    transform: rotateY(180deg);
+}
+
+
+
+
+.big{
+    grid-template-rows: 3fr 2fr;
+}
+.yandex-logo{
+    width: 150px;
+    height: 43px;
+}
+.avito-logo{
+    width: 127.5px;
+    height: 34px;
+}
+
+
+/* clients */
+.clients{
+
+    background-image: linear-gradient(180deg,rgba(40, 40, 40, 1) 0%, rgba(255, 255, 255, 0) 18%, rgba(255, 255, 255, 0) 77%, rgba(40, 40, 40, 1) 100%),
+    url('../img/clients-bg.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 3rem 0;
+}
+.clients_content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* benifits */
+
+.advantages{
+    width: 100%;
+    background-image: linear-gradient(180deg,rgba(40, 40, 40, 1) 0%, rgba(255, 255, 255, 0) 18%, rgba(255, 255, 255, 0) 77%, rgba(40, 40, 40, 1) 100%),
+    url('../img/benifits-bg.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 3rem 0;
+
+}
+.advantages_content{
+    padding: 200px 0 100px 0;
+}
+
+.slider {
+    overflow-x: hidden;
+    position: relative;
+    margin-bottom: 300px;
+}
+
+.slider-track {
+    display: flex;
+    align-items: center;
+    will-change: transform; /* Оптимизация для анимации */
+}
+
+.slide {
+    margin-right: 64px;
+    flex-shrink: 0;
+    width: 280px;
+    height: 280px;
+    background: var(--primary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 24px;
+    font-weight: bold;
+    border-radius: var(--radius_5);
+    padding: 1rem;
+    text-align: center;
+    text-align: center;
+}
+
+.portfolio{}
+.portfolio_content{}
+.portfolio_top{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.portfolio_top_title{
+    width: 50%;
+}
+.portfolio_top_text{
+    width: 50%;
+}
+
+.portfolio_slider{
+    margin-top: 6rem;
+    width: 100%;
+    height: 600px;
+}
+.portfolio_slider_slide img{
+    width: 100%;
+    height: 100%;
+}
+.portfolio_slider_wrapper{
+    width: 100%;
+}
+
+
+.portfolio_img{
+    position: relative;
+}
+.portfolio_img:hover .portfolio_hover{
+    display: block;
+}
+.portfolio_img:hover .portfolio_first{
+    display: none;
+}
+
+.portfolio_first{
+    display: block;
+}
+
+
+.portfolio_hover{
+    display: none;
+}
+
+

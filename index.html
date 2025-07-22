@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="src/css/style.css">
     <title>Document</title>
 </head>
@@ -68,7 +68,7 @@
                         <div class="swiper-slide swiper-front_slide" style="background-image: url('src/img/slide1.jpg')">
                             <div class="container">
                                 <div class="swiper-front_slide_content">
-                                    <h1 class="h1">Роллетные<br> металлические<br> <span class="h1 accent-color">шкафы</span></h1>
+                                    <h1 class="h1" data-aos="fade-up">Роллетные<br> металлические<br> <span class="h1 accent-color">шкафы</span></h1>
                                     <h3 class="h3 mt-2">Изготавливаем по вашим размерам<br> для любых задач и пространств</h3>
                                     <ul class="arrow-list">
                                         <li class="h3 arrow-list_item">Собственное производство</li>
@@ -79,7 +79,7 @@
                                     </ul>
                                     <div class="btn_block">
                                         <a class="btn-primary">Оставить заявку</a>
-                                        <a class="h3_link ml-2">Каталог решений</a>
+                                        <a class="h3_link ml-2 constructor-js">Конструктор</a>
                                     </div>
                                 </div>
                             </div>
@@ -111,7 +111,7 @@
 
     <section class="experience">
         <div class="container">
-            <div class="experience_content">
+            <div class="experience_content" data-aos="fade-up">
                 <div class="experience_item big">
                     <div class="experience_item_inner" style="background-image: url('src/img/reviews/1.png');">
                         <div class="main-text">Отзывы</div>
@@ -172,7 +172,7 @@
                     </div>
                 </div>
                 <div class="clients_right">
-                    <img src="src/img/clients-logo.png" alt="">
+                    <!-- js generate content -->
                 </div>
             </div>
         </div>
@@ -262,52 +262,378 @@
             <div class="swiper-wrapper portfolio_slider_wrapper">
                 <div class="swiper-slide portfolio_slider_slide">
                     <div class="portfolio_img">
-                        <img class="portfolio_first" src="https://i.pinimg.com/originals/19/89/44/198944ea9f57d70ea850fc868efbd4b6.jpg">
-                        <img class="portfolio_hover" src="https://i.pinimg.com/originals/19/89/44/198944ea9f57d70ea850fc868efbd4b6.jpg">
+                        <img class="portfolio_first" src="src/img/portfolio/p1.png">
+                        <img class="portfolio_hover" src="src/img/portfolio/p1h.png">
                     </div>
                 </div>
                 <div class="swiper-slide portfolio_slider_slide">
                     <div class="portfolio_img">
-                        <img src="https://i.pinimg.com/originals/19/89/44/198944ea9f57d70ea850fc868efbd4b6.jpg">
+                        <img class="portfolio_first" src="src/img/portfolio/p2.png">
+                        <img class="portfolio_hover" src="src/img/portfolio/p2h.png">
                     </div>
                 </div>
                 <div class="swiper-slide portfolio_slider_slide">
                     <div class="portfolio_img">
-                        <img src="https://i.pinimg.com/originals/19/89/44/198944ea9f57d70ea850fc868efbd4b6.jpg">
+                        <img class="portfolio_first" src="src/img/portfolio/p3.png">
+                        <img class="portfolio_hover" src="src/img/portfolio/p3h.png">
                     </div>
                 </div>
                 <div class="swiper-slide portfolio_slider_slide">
                     <div class="portfolio_img">
-                        <img src="https://i.pinimg.com/originals/19/89/44/198944ea9f57d70ea850fc868efbd4b6.jpg">
+                        <img class="portfolio_first" src="src/img/portfolio/p4.png">
+                        <img class="portfolio_hover" src="src/img/portfolio/p4h.png">
                     </div>
                 </div>
                 <div class="swiper-slide portfolio_slider_slide">
                     <div class="portfolio_img">
-                        <img src="https://i.pinimg.com/originals/19/89/44/198944ea9f57d70ea850fc868efbd4b6.jpg">
+                        <img class="portfolio_first" src="src/img/portfolio/p5.png">
+                        <img class="portfolio_hover" src="src/img/portfolio/p5h.png">
                     </div>
                 </div>
                 <div class="swiper-slide portfolio_slider_slide">
                     <div class="portfolio_img">
-                        <img src="https://i.pinimg.com/originals/19/89/44/198944ea9f57d70ea850fc868efbd4b6.jpg">
+                        <img class="portfolio_first" src="src/img/portfolio/p6.png">
+                        <img class="portfolio_hover" src="src/img/portfolio/p6h.png">
                     </div>
                 </div>
                 <div class="swiper-slide portfolio_slider_slide">
                     <div class="portfolio_img">
-                        <img src="https://i.pinimg.com/originals/19/89/44/198944ea9f57d70ea850fc868efbd4b6.jpg">
+                        <img class="portfolio_first" src="src/img/portfolio/p1.png.png">
+                        <img class="portfolio_hover" src="src/img/portfolio/p1h.png">
                     </div>
                 </div>
                 <div class="swiper-slide portfolio_slider_slide">
                     <div class="portfolio_img">
-                        <img src="https://i.pinimg.com/originals/19/89/44/198944ea9f57d70ea850fc868efbd4b6.jpg">
+                        <img class="portfolio_first" src="src/img/portfolio/p2.png">
+                        <img class="portfolio_hover" src="src/img/portfolio/p2h.png">
                     </div>
                 </div>
             </div>
-            <!--<div class="swiper-pagination"></div>-->
+        <div class="swiper-pagination"></div>
         </div>
     </section>
 
+    <section class="faq">
+        <div class="container">
+            <div class="faq_content">
+                <div class="faq_block">
+                    <div class="faq_block_item">
+                        <div class="faq_block_item_visible">
+                            <div class="faq_img">
+                                <img src="src/img/faq/f1.png" alt="">
+                            </div>
+
+                            <div class="faq-title">Роллетные<br> шкафы</div>
+                        </div>
+                        <div class="faq_block_item_hiden">
+                            <div class="faq-title">
+                                Роллетные<br> шкафы
+                            </div>
+                              <div class="faq_menu">
+                                  <a href="">
+                                      Противопожарные шкафы
+                                  </a>
+                                  <a href="">
+                                      Шкафы для паркинга
+                                  </a>
+                                  <a href="">
+                                      Шкафы для колес и шин
+                                  </a>
+                                  <a href="">
+                                      ПШкафы для гаражей
+                                  </a>
+                                  <a href="">
+                                      Уличные шкафы
+                                  </a>
+                              </div>
+                        </div>
+                    </div>
+                    <div class="faq_block_item">
+                        <div class="faq_block_item_visible">
+                            <div class="faq_img">
+                                <img src="src/img/faq/f1.png" alt="">
+                            </div>
+                            <div class="faq-title">Роллетные<br> шкафы</div>
+                        </div>
+                        <div class="faq_block_item_hiden">
+                            <div class="faq-title">
+                                Роллетные<br> шкафы
+                            </div>
+                            <div class="faq_menu">
+                                <a href="">
+                                    Противопожарные шкафы
+                                </a>
+                                <a href="">
+                                    Шкафы для паркинга
+                                </a>
+                                <a href="">
+                                    Шкафы для колес и шин
+                                </a>
+                                <a href="">
+                                    ПШкафы для гаражей
+                                </a>
+                                <a href="">
+                                    Уличные шкафы
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="faq_btn">
+                    <a class="btn-primary mt-2">Частые вопросы</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="constructor">
+        <div class="constructor_outlay">
+            <div class="constructor_content">
+                <div class="cross">
+                    <img class="cross-close" src="src/img/svg/cross.png" alt="">
+                </div>
+                <form action="" class="constructor_form">
+                    <div class="constructor_left const_big">
+                        <div class="h2 accent-color">Конструктор</div>
+                        <div class="select_first">
+                            <div class="select_first_item">
+                                <div class="select_first_item_title h3">
+                                    Габариты
+                                </div>
+                                <div class="rage_block">
+                                    <div class="rage_title">Ширина, м</div>
+                                    <div class="input_range">
+                                        <div class="input_range_minus">-</div>
+                                        <input type="text" class="input_range_number" value="0.82">
+                                        <div class="input_range_plus">+</div>
+                                    </div>
+                                </div>
+                                <div class="rage_block">
+                                    <div class="rage_title">Глубина, м</div>
+                                    <div class="input_range">
+                                        <div class="input_range_minus">-</div>
+                                        <input type="text" class="input_range_number" value="0.82">
+                                        <div class="input_range_plus">+</div>
+                                    </div>
+                                </div>
+                                <div class="rage_block">
+                                    <div class="rage_title">Высота, м</div>
+                                    <div class="input_range">
+                                        <div class="input_range_minus">-</div>
+                                        <input type="text" class="input_range_number" value="0.82">
+                                        <div class="input_range_plus">+</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="select_first_item">
+                                <div class="select_first_item_title h3">
+                                   Стенки
+                                </div>
+                                <div class="const_check">
+                                    <label for="left-wall">
+                                        <input type="checkbox" name="" id="left-wall">
+                                        <span>Левая</span>
+                                    </label>
+                                </div>
+                                <div class="const_check">
+                                    <label for="right-wall">
+                                        <input type="checkbox" name="" id="right-wall">
+                                        <span>Правая</span>
+                                    </label>
+                                </div>
+                                <div class="const_check">
+                                    <label for="back-wall">
+                                        <input type="checkbox" name="" id="back-wall">
+                                        <span>Задняя</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="select_second">
+                            <div class="h3">Количество полок</div>
+                            <div class="input_range">
+                                <div class="input_range_minus">-</div>
+                                <input type="text" class="input_range_number" value="2">
+                                <div class="input_range_plus">+</div>
+                            </div>
+                        </div>
+                        <div class="select_third">
+                            <div class="h3">Цвет шкафа</div>
+                            <div class="color_select">
+                                <label class="active" for="color-1" style="background-image: url('src/img/colors/c-serebro.jpg')">
+                                    <input type="checkbox" name="" id="color-1">
+                                </label>
+                                <label for="color-2" style="background-image: url('src/img/colors/c-beg.jpg')">
+                                    <input type="checkbox" name="" id="color-2">
+                                </label>
+                                <label for="color-3" style="background-image: url('src/img/colors/c-korich.jpg')">
+                                    <input type="checkbox" name="" id="color-3">
+                                </label>
+                                <label for="color-4" style="background-image: url('src/img/colors/c-belij.jpg')">
+                                    <input type="checkbox" name="" id="color-4">
+                                </label>
+                                <label for="color-5" style="background-image: url('src/img/colors/c-serij.jpg')">
+                                    <input type="checkbox" name="" id="color-5">
+                                </label>
+                                <label for="color-6" style="background-image: url('src/img/colors/c-all.png')">
+                                    <input type="checkbox" name="" id="color-6">
+                                </label>
+                            </div>
+                        </div>
+                        <div class="select_four">
+                            <div class="select_first_item">
+                                <div class="select_first_item_title h3">
+                                    Основные опции
+                                </div>
+                                <div class="const_check">
+                                    <label for="antifire">
+                                        <input type="checkbox" name="" id="antifire">
+                                        <span>Модуль пожаротушения</span>
+                                    </label>
+                                </div>
+                                <div class="const_check">
+                                    <label for="antihydro">
+                                        <input type="checkbox" name="" id="antihydro">
+                                        <span>Гидроизоляция</span>
+                                    </label>
+                                </div>
+                                <div class="const_check">
+                                    <label for="germetic">
+                                        <input type="checkbox" name="" id="germetic">
+                                        <span>Герметизация</span>
+                                    </label>
+                                </div>
+                                <div class="const_check">
+                                    <label for="electro">
+                                        <input type="checkbox" name="" id="electro">
+                                        <span>Электропривод</span>
+                                    </label>
+                                </div>
+                                <div class="const_check">
+                                    <label for="otboinik">
+                                        <input type="checkbox" name="" id="otboinik">
+                                        <span>Отбойник</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="constructor_center const_big">
+                        <div class="constructor_center_img">
+                            <img src="src/img/constructor/default.png" alt="">
+                        </div>
+                    </div>
+                    <div class="constructor_right const_big">
+                        <div class="ben-block">
+                            <div class="ben_item">
+                                <div class="ben_item_number">
+                                    01
+                                </div>
+                                <div class="ben_item_title">
+                                     Выберите размеры и опции
+                                </div>
+                                <div class="ben_item_text">
+                                    Укажите габариты, комплектацию и дополнительные параметры будущего изделия
+                                </div>
+                            </div>
+                            <div class="ben_item">
+                                <div class="ben_item_number">
+                                    02
+                                </div>
+                                <div class="ben_item_title">
+                                    Оставьте свои контактные данные
+                                </div>
+                                <div class="ben_item_text">
+                                    Введите ваше имя и номер телефона — наш менеджер свяжется с вами для уточнения деталей
+                                </div>
+                            </div>
+                            <div class="ben_item">
+                                <div class="ben_item_number">
+                                    03
+                                </div>
+                                <div class="ben_item_title">
+                                    Согласование и замер
+                                </div>
+                                <div class="ben_item_text">
+                                    Мы согласуем удобное время для выезда специалиста. Замерщик приедет на объект, чтобы точно зафиксировать размеры и условия установки
+                                </div>
+                            </div>
+                            <div class="ben_item">
+                                <div class="ben_item_number">
+                                    04
+                                </div>
+                                <div class="ben_item_title">
+                                    Подготовка и расчёт стоимости
+                                </div>
+                                <div class="ben_item_text">
+                                    После замера вы получите дизайн-проект с финальной стоимостью, схемой изделия и выбранными опциями. Производство запускается после подписания договора, утверждения проекта и оплаты
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="const_contact">
+                            <input type="text" placeholder="Введите ваше имя*">
+                            <input type="tel" placeholder="+7 (999) 999-99-99*" value="+7">
+                            <button class="btn-primary">Отсавить заявку</button>
+                            <div class="agree">Нажимая на кнопку “Оставить заявку”, я даю своё согласие на обработку персональных данных в соответствии с
+                                <a href="">Политикой конфиденциальности.</a></div>
+                        </div>
+
+
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer_content">
+                <div class="footer_top">
+                    <div class="footer_top_item flex-1">
+                        <div class="header_logo">
+                            <img src="src/img/logo.png" alt="">
+                        </div>
+                        <div class="main-text mt-1">
+                            Работаем каждый день с 9:00 до 22:00 <br>Без праздников и выходных
+                        </div>
+                        <div class="footer_contacts mt-1">
+                            <a href="tel:+74950707497" class="footer_phone">+7 (495) 07 07 497</a>
+                            <a href="mailto:domebox@yandex.ru" class="footer_email">domebox@yandex.ru</a>
+                        </div>
+                    </div>
+                    <div class="footer_top_item">
+                        <div class="footer_title">
+                            Клиентам
+                        </div>
+                        <a class="menu-link footer_subtitle">Полезное</a>
+                        <a class="menu-link footer_subtitle">Сертификаты</a>
+                        <a class="menu-link footer_subtitle">Оплата</a>
+                        <a class="menu-link footer_subtitle">Доставка и монтаж</a>
+                        <a class="menu-link footer_subtitle">Гарантия</a>
+                    </div>
+                    <div class="footer_top_item">
+                        <div class="footer_title">
+                            Информация
+                        </div>
+                        <a class="menu-link footer_subtitle">Каталог</a>
+                        <a class="menu-link footer_subtitle">Портфолио</a>
+                        <a class="menu-link footer_subtitle">О нас</a>
+                        <a class="menu-link footer_subtitle">Контакты</a>
+                        <a class="menu-link footer_subtitle">Реквизиты</a>
+                    </div>
+                </div>
+                <div class="footer_bottom">
+                    <span class="copy">©2025</span>
+                    <a class="policy" href="">Политика конфиденциальности и обработки персональных данных</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="src/js/script.js"></script>
 
 </body>

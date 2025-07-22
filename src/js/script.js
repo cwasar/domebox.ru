@@ -1,7 +1,12 @@
+window.onload = function() {
+    // Ваш скрипт
+
+
+
 // slider
 
-/*
-const swiper = new Swiper(".swiper", {
+
+const swiper = new Swiper(".swiper-front", {
     // Optional parameters
     loop: true,
 
@@ -21,7 +26,7 @@ const swiper = new Swiper(".swiper", {
         el: ".swiper-scrollbar",
     },
 });
-*/
+
 
 
 //прокрутка преимуществ
@@ -82,7 +87,7 @@ initSlider();
 
 // slider portfolio
 
-const portfolio_slider = new Swiper(".portfolio_slider", {
+const swiper2 = new Swiper(".portfolio_slider", {
     // Optional parameters
     loop: true,
     slidesPerView: 5,
@@ -91,11 +96,95 @@ const portfolio_slider = new Swiper(".portfolio_slider", {
     centeredSlidesBounds: true,
 
     // If we need pagination
-   /* pagination: {
+   pagination: {
         el: ".swiper-pagination",
-    },*/
+    },
 
 });
+
+
+//анимации
+    AOS.init();
+
+
+
+    //логотипы клиентов на главной
+
+    const logos = document.querySelector('.clients_right')
+    if(logos) {
+
+        for (let i = 1; i < 19; i++) {
+            let newEl = document.createElement('div')
+            newEl.classList.add('clients_right_item')
+            newEl.setAttribute('data-aos', 'zoom-in')
+            newEl.setAttribute('data-aos-delay', getRandomInt(1, 10) * 100)
+            newEl.innerHTML = `
+            <img src="src/img/logos/l${i}.png" alt="">
+            `
+            logos.insertAdjacentElement('beforeend', newEl)
+        }
+
+    }
+
+    function getRandomInt(min, max) {
+        min = Math.ceil(min);
+        max = Math.floor(max);
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+
+
+
+    //constructor
+
+    const constuctor = document.querySelector('.constructor')
+
+    document.body.addEventListener('click', e => {
+        if(e.target.classList.contains('constructor-js')) {
+            constuctor.style.display = 'block'
+        }
+        if(e.target.classList.contains('cross-close')) {
+            constuctor.style.display = 'none'
+        }
+    })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//end of scripts
+};
+
+
+
+
 
 
 

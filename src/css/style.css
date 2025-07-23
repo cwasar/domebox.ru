@@ -226,11 +226,12 @@ body a{
     margin-top: 1rem;
     padding: 0.5rem 2rem;
     transition: background-color 0.2s ease-in;
+    border-radius: var(--radius_5);
 }
 .header_menu:hover{
 
     background-color: var(--primary-color);
-    border-radius: var(--radius_5);
+
 }
 nav{
     display: flex;
@@ -396,8 +397,9 @@ nav{
 /* ОТЗЫВЫ */
 
 .experience{
-    height: 80vh;
-    background-image: linear-gradient(180deg,rgba(40, 40, 40, 1) 0%, rgba(255, 255, 255, 0) 18%, rgba(255, 255, 255, 0) 77%, rgba(40, 40, 40, 1) 100%);
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    background-color: var(--primary-color);
 }
 .experience_content{
     display: flex;
@@ -409,7 +411,7 @@ nav{
 
 .experience_item{
     flex: 1;
-    height: 600px;
+    min-height: 800px;
     display: grid;
     grid-template-rows:2fr 3fr;
     grid-gap: 2rem;
@@ -421,12 +423,13 @@ nav{
     height: auto;
     background-size: cover;
     background-position: center;
-    padding: 1rem;
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-between;
+    perspective: 1000px;
+    padding: 1rem;
 
 }
 .experience_item_inner:before{
@@ -444,27 +447,19 @@ nav{
     z-index: 2;
 }
 .flip-card-inner{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-between;
-    height: 100%;
-}
-
-
-.flip-card {
-    background-color: transparent;
-
-    perspective: 1000px; /* Remove this if you don't want the 3D effect */
-}
-
-/* This container is needed to position the front and back side */
-.flip-card-inner {
     position: relative;
     width: 100%;
     height: 100%;
+    text-align: center;
     transition: transform 0.8s;
     transform-style: preserve-3d;
+}
+
+.flip-card {
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
 }
 
 /* Do an horizontal flip when you move the mouse over the flip box container */
@@ -479,11 +474,18 @@ nav{
     height: 100%;
     -webkit-backface-visibility: hidden; /* Safari */
     backface-visibility: hidden;
+
 }
 
 /* Style the front side (fallback if image is missing) */
 .flip-card-front {
-
+    background-size: cover;
+    background-position: center;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
 
 }
 
@@ -492,10 +494,32 @@ nav{
     background-color: var(--primary-color);
     color: white;
     transform: rotateY(180deg);
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: column;
 }
 
-
-
+.yandex-face{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.yandex-img{}
+.yandex-name{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+.yandex-name_title{}
+.yandex-name_stars{}
+.yandex-text{
+    text-align: left;
+}
+.yandex-address{
+    display: flex;
+    align-self: end;
+}
 
 .big{
     grid-template-rows: 3fr 2fr;
@@ -513,8 +537,8 @@ nav{
 /* clients */
 .clients{
 
-    background-image: linear-gradient(180deg,rgba(40, 40, 40, 1) 0%, rgba(255, 255, 255, 0) 18%, rgba(255, 255, 255, 0) 77%, rgba(40, 40, 40, 1) 100%),
-    url('../img/clients-bg.png');
+    /*background-image: linear-gradient(180deg,rgba(40, 40, 40, 1) 0%, rgba(255, 255, 255, 0) 18%, rgba(255, 255, 255, 0) 77%, rgba(40, 40, 40, 1) 100%),
+    url('../img/clients-bg.png');*/
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -656,6 +680,8 @@ nav{
 .faq{
     background-image: linear-gradient(180deg,rgba(40, 40, 40, 1) 0%, rgba(255, 255, 255, 0) 18%, rgba(255, 255, 255, 0) 77%, rgba(40, 40, 40, 1) 100%),
     url('../img/faq-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
     height: 1000px;
 }
 .faq_content{

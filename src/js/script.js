@@ -137,14 +137,46 @@ const swiper2 = new Swiper(".portfolio_slider", {
     //constructor
 
     const constuctor = document.querySelector('.constructor')
+    const popup = document.querySelector('.popup')
+    const popupTitle = document.querySelector('.popup-title')
+    const faqPopup = document.querySelector('.faq-popup')
 
     document.body.addEventListener('click', e => {
+
+        /*constructor*/
         if(e.target.classList.contains('constructor-js')) {
             constuctor.style.display = 'block'
         }
         if(e.target.classList.contains('cross-close')) {
             constuctor.style.display = 'none'
         }
+
+        /*popup*/
+        if(e.target.classList.contains('call-js')) {
+            popup.style.display = 'flex'
+            popupTitle.innerHTML = 'Закажите обратный звонок'
+        }
+        if(e.target.classList.contains('request-js')) {
+            popup.style.display = 'flex'
+            popupTitle.innerHTML = 'Оставьте заявку'
+        }
+        if(e.target.classList.contains('close-popup')) {
+            popup.style.display = 'none'
+        }
+
+        /*faq-popup*/
+
+        if(e.target.classList.contains('faq-popup-js')) {
+            e.preventDefault()
+            faqPopup.style.display = 'flex'
+        }
+
+        if(e.target.classList.contains('faq-cross')) {
+            faqPopup.style.display = 'none'
+        }
+
+
+
     })
 
 

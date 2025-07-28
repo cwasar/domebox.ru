@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="src/css/style.css">
+    <link rel="stylesheet" href="src/css/mobile.css">
     <title>Document</title>
 </head>
 <body>
@@ -19,8 +20,11 @@
         <div class="container">
             <div class="header_content">
                 <div class="header_top">
+                    <div class="burger">
+                        <span></span>
+                    </div>
                     <div class="header_phone">
-                        <a href="" class="number">+7 (495) 07 07 497</a>
+                        <a href="tel:+7945070497" class="number">+7 (495) 07 07 497</a>
                         <div class="callback menu-extra call-js">Позвоните мне!</div>
                     </div>
                     <div class="header_logo">
@@ -29,8 +33,13 @@
                     <div class="header_callback">
                         <div class="btn-secondary request-js">Оставить заявку</div>
                     </div>
+                    <div class="mobile-call">
+                        <a href="tel:+7945070497" class="number">
+                            <img src="src/img/phone.png" alt="">
+                        </a>
+                    </div>
                 </div>
-                <nav>
+                <nav class="main-navigation">
                     <ul class="header_menu" >
                         <li><a href="#" class="menu-link">Каталог</a></li>
                         <li><a href="#" class="menu-link">Портфолио</a></li>
@@ -51,6 +60,23 @@
                         <li><a href="#" class="menu-link">О нас</a></li>
                         <li><a href="#" class="menu-link">Контакты</a></li>
                     </ul>
+                    <div class="mobile-block">
+                        <div class="header_callback_mobile">
+                            <div class="btn-secondary request-js">Оставить заявку</div>
+                        </div>
+                        <div class="header_phone_block">
+                            <div class="header_phone_mobile">
+                                <a href="" class="number">+7 (495) 07 07 497</a>
+                                <div class="callback menu-extra call-js">Позвоните мне!</div>
+                            </div>
+                            <div class="time">
+                                С 9:00 до 22:00
+                            </div>
+                        </div>
+                        <div class="header_logo_mobile">
+                            <img src="src/img/logo.png" alt="">
+                        </div>
+                    </div>
                 </nav>
             </div>
         </div>
@@ -457,25 +483,22 @@
                                 <div class="rage_block">
                                     <div class="rage_title">Ширина, м</div>
                                     <div class="input_range">
-                                        <div class="input_range_minus">-</div>
-                                        <input type="text" class="input_range_number" value="0.82">
-                                        <div class="input_range_plus">+</div>
+                                        <div class="current-range">0.7</div>
+                                        <input id="num1" class="input_range_number" type="range" min="0.7" max="6" step="0.1" value="0.7" name="shrina" readonly="">
                                     </div>
                                 </div>
                                 <div class="rage_block">
                                     <div class="rage_title">Глубина, м</div>
                                     <div class="input_range">
-                                        <div class="input_range_minus">-</div>
-                                        <input type="text" class="input_range_number" value="0.82">
-                                        <div class="input_range_plus">+</div>
+                                        <div class="current-range">0.3</div>
+                                        <input id="num2" class="input_range_number" type="range" min="0.3" max="1.4" step="0.1" value="0.3" name="glubina" readonly="">
                                     </div>
                                 </div>
                                 <div class="rage_block">
                                     <div class="rage_title">Высота, м</div>
                                     <div class="input_range">
-                                        <div class="input_range_minus">-</div>
-                                        <input type="text" class="input_range_number" value="0.82">
-                                        <div class="input_range_plus">+</div>
+                                        <div class="current-range">2</div>
+                                        <input id="num3" class="input_range_number" type="range" min="2" max="3" step="0.05" value="2" name="visota" readonly="">
                                     </div>
                                 </div>
                             </div>
@@ -506,16 +529,15 @@
                         <div class="select_second">
                             <div class="h3">Количество полок</div>
                             <div class="input_range">
-                                <div class="input_range_minus">-</div>
-                                <input type="text" class="input_range_number" value="2">
-                                <div class="input_range_plus">+</div>
+                                <div class="current-range">0</div>
+                                <input id="num4" class="input_range_number" type="range" min="0" max="3" step="1" value="0" name="polki" readonly="">
                             </div>
                         </div>
                         <div class="select_third">
                             <div class="h3">Цвет шкафа</div>
                             <div class="color_select">
-                                <label class="active" for="color-1" style="background-image: url('src/img/colors/c-serebro.jpg')">
-                                    <input type="checkbox" name="" id="color-1">
+                                <label  for="color-1" style="background-image: url('src/img/colors/c-serebro.jpg')">
+                                    <input class="active" type="checkbox" name="" id="color-1">
                                 </label>
                                 <label for="color-2" style="background-image: url('src/img/colors/c-beg.jpg')">
                                     <input type="checkbox" name="" id="color-2">
@@ -573,8 +595,10 @@
                         </div>
                     </div>
                     <div class="constructor_center const_big">
-                        <div class="constructor_center_img">
-                            <img src="src/img/constructor/default.png" alt="">
+                        <div class="constructor_center_img" style="background-image: url('src/img/constructor/color-1.png')">
+                            <img class="left-wall" src="src/img/constructor/st-left.png" alt="">
+                            <img class="right-wall" src="src/img/constructor/st-right.png" alt="">
+                            <img class="back-wall" src="src/img/constructor/st-back.png" alt="">
                         </div>
                     </div>
                     <div class="constructor_right const_big">
@@ -727,25 +751,27 @@
                             <a href="mailto:domebox@yandex.ru" class="footer_email">domebox@yandex.ru</a>
                         </div>
                     </div>
-                    <div class="footer_top_item">
-                        <div class="footer_title">
-                            Клиентам
+                    <div class="footer_top_menu">
+                        <div class="footer_top_item">
+                            <div class="footer_title">
+                                Клиентам
+                            </div>
+                            <a class="menu-link footer_subtitle">Полезное</a>
+                            <a class="menu-link footer_subtitle">Сертификаты</a>
+                            <a class="menu-link footer_subtitle">Оплата</a>
+                            <a class="menu-link footer_subtitle">Доставка и монтаж</a>
+                            <a class="menu-link footer_subtitle">Гарантия</a>
                         </div>
-                        <a class="menu-link footer_subtitle">Полезное</a>
-                        <a class="menu-link footer_subtitle">Сертификаты</a>
-                        <a class="menu-link footer_subtitle">Оплата</a>
-                        <a class="menu-link footer_subtitle">Доставка и монтаж</a>
-                        <a class="menu-link footer_subtitle">Гарантия</a>
-                    </div>
-                    <div class="footer_top_item">
-                        <div class="footer_title">
-                            Информация
+                        <div class="footer_top_item">
+                            <div class="footer_title">
+                                Информация
+                            </div>
+                            <a class="menu-link footer_subtitle">Каталог</a>
+                            <a class="menu-link footer_subtitle">Портфолио</a>
+                            <a class="menu-link footer_subtitle">О нас</a>
+                            <a class="menu-link footer_subtitle">Контакты</a>
+                            <a class="menu-link footer_subtitle">Реквизиты</a>
                         </div>
-                        <a class="menu-link footer_subtitle">Каталог</a>
-                        <a class="menu-link footer_subtitle">Портфолио</a>
-                        <a class="menu-link footer_subtitle">О нас</a>
-                        <a class="menu-link footer_subtitle">Контакты</a>
-                        <a class="menu-link footer_subtitle">Реквизиты</a>
                     </div>
                 </div>
                 <div class="footer_bottom">
@@ -755,6 +781,55 @@
             </div>
         </div>
     </footer>
+
+
+
+
+    <!-- Ползунок 1 -->
+    <div class="slider-container">
+        <div class="slider-header">Параметр 1</div>
+        <div class="slider-group">
+            <div class="slider-value" id="value1">50</div>
+            <input type="range"
+                   class="slider"
+                   id="slider1"
+                   min="0"
+                   max="100"
+                   step="1"
+                   value="50">
+        </div>
+    </div>
+
+    <!-- Ползунок 2 -->
+    <div class="slider-container">
+        <div class="slider-header">Параметр 2</div>
+        <div class="slider-group">
+            <div class="slider-value" id="value2">75</div>
+            <input type="range"
+                   class="slider"
+                   id="slider2"
+                   min="50"
+                   max="150"
+                   step="5"
+                   value="75">
+        </div>
+    </div>
+
+    <!-- Ползунок 3 -->
+    <div class="slider-container">
+        <div class="slider-header">Параметр 3</div>
+        <div class="slider-group">
+            <div class="slider-value" id="value3">30</div>
+            <input type="range"
+                   class="slider"
+                   id="slider3"
+                   min="10"
+                   max="50"
+                   step="2"
+                   value="30">
+        </div>
+    </div>
+
 
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>

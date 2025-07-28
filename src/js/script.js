@@ -99,6 +99,20 @@ const swiper2 = new Swiper(".portfolio_slider", {
    pagination: {
         el: ".swiper-pagination",
     },
+    breakpoints: {
+        200: {
+            slidesPerView: 1,
+        },
+        640: {
+            slidesPerView: 1,
+        },
+        768: {
+            slidesPerView: 3,
+        },
+        1024: {
+            slidesPerView: 5,
+        },
+    },
 
 });
 
@@ -180,8 +194,71 @@ const swiper2 = new Swiper(".portfolio_slider", {
     })
 
 
+    /*действия внутри конструктора*/
+    const constructorForm = document.querySelector('.constructor_form')
+    const mainImage = document.querySelector('.constructor_center_img')
+    const colorSelect = document.querySelector('.color_select')
+
+    if(constructorForm) {
+        constructorForm.addEventListener('click', e => {
+            if(e.target.id === 'left-wall') {
+                e.target.checked ? mainImage.classList.add('left') : mainImage.classList.remove('left')
+            }
+            if(e.target.id === 'right-wall') {
+                e.target.checked ? mainImage.classList.add('right') : mainImage.classList.remove('right')
+            }
+            if(e.target.id === 'back-wall') {
+                e.target.checked ? mainImage.classList.add('back') : mainImage.classList.remove('back')
+            }
+
+            //выбор цвета
+            if(colorSelect) {
+                colorSelect.addEventListener('click', e => {
+
+                    let inputs = colorSelect.querySelectorAll('input')
+                    inputs.forEach(item => {
+                        item.classList.remove('active')
+                        item.checked = !item.checked
+                    })
+                    e.target.classList.add('active')
+                    console.log(mainImage)
+                    console.log(e.target.id)
+                    mainImage.style.backgroundImage = `url("src/img/constructor/${e.target.id}.png")`
+                })
+            }
+
+            /* +- */
+
+            const ranges = document.querySelectorAll('.input_range')
+            console.log(ranges)
+            ranges.forEach( item => {
+                item.addEventListener('input', e => {
+                    if(e.target.tagName === 'INPUT'){
+                        item.querySelector('.current-range').innerHTML = e.target.value
+                    }
+                })
+            })
 
 
+
+
+
+        })
+    }
+    /*действия внутри конструктора*/
+
+
+    /* мобильное меню */
+    const burger = document.querySelector('.burger')
+    const mainNavigation = document.querySelector('.main-navigation')
+    const mobileBlock = document.querySelector('.mobile-block')
+    if(burger){
+        burger.addEventListener('click', e => {
+            burger.classList.toggle('active')
+            mainNavigation.classList.toggle('active')
+            mobileBlock.classList.toggle('active')
+        })
+    }
 
 
 
